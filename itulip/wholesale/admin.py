@@ -4,7 +4,7 @@ from wholesale.models import *
 
 # Register your models here.
 
-admin.site.register(Orders)
-admin.site.register(OrderDetails)
-admin.site.register(Clients)
-admin.site.register(Sorts)
+admin.site.register(Order)
+admin.site.register(OrderDetail)
+admin.site.register(Client)
+admin.site.register(Sort)
