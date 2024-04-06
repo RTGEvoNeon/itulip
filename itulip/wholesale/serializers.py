@@ -4,16 +4,18 @@ from wholesale.models import *
 
 
 class ClientSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
         model = Client
         many = True
-        fields = ['id', 'last_name', 'first_name', 'middle_name', 'phone_number']
+        fields = '__all__'
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order 
         many = True
-        fields = ['id', 'full_price', 'prepayment', 'date', 'client']
+        fields = '__all__'
+        
 
 class SortSerializer(serializers.ModelSerializer):
     class Meta:
